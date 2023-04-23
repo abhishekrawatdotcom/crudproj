@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+table, th, td {
+  border:1px solid black;
+}
+</style>
+</head>
+<body>
+
+
+<table style="width:100%">
+  <tr>
+    <th>Group1</th>
+    <th>Group2</th>
+    <th>Group3</th>
+    <th>Group4</th>
+    <th>Group5</th>
+    <th>Group6</th>
+    <th>Group7</th>
+    <th>Group8</th>
+    <th>Group9</th>
+    <th>Group10</th>
+    <th>Salutation</th>
+    <th>First_Name</th>
+    <th>Middle_Name</th>
+    <th>Last_Name</th>
+    <th>Primary_Number</th>
+    <th>Alternate_Number</th>
+    <th>Primary_Mail</th>
+    <th>Alternate_Mail</th>
+    <th>Location</th>
+    <th>City</th>
+    <th>State</th>
+    <th>Country</th>
+    <th>Pincode</th>
+    <th>Designation</th>
+    <th>Primary_Expertise</th>
+    <th>Primary_Expertise1</th>
+    <th>Primary_Expertise2</th>
+    <th>Highest_Education</th>
+    <th>Gender</th>
+    <th>DOB</th>
+    <th>Message_Open</th>
+    <th>Responded</th>
+    <th>Linked_Clicked</th>
+    <th>Source</th>
+    <th>Org_Name</th>
+    <th>Nature_Of_Business</th>
+    <th>Org_Name_Location</th>
+    <th>Do_Not_Call</th>
+    <th>Do_Not_Message</th>
+    <th>Do_Not_Mail</th>
+    <th>Do_Not_Whatsapp</th>
+    <th>Do_Not_Disturb</th>
+    <th>Notes1</th>
+    <th>Notes2</th>
+    <th>Notes3</th>
+    <th>Notes4</th>
+    <th>Notes5</th>
+    <th>Remarks</th>
+    <th>Document_Attach</th>
+    <th>Called</th>
+    <th>Met</th>
+    <th>Full_Name</th>
+    <th>Out_Of_Station</th>
+    <th>Out_Of_Country</th>
+    <th>Generated_Pincode</th>
+    <th>Mark_For_Deletion</th>
+    <th>Reason_For_Deletion</th>
+    <th>Blog_Link</th>
+    <th>Website</th>
+    <th>Linkedin_Link</th>
+    <th>Instagram_Link</th>
+    <th>Youtube_Link</th>
+    <th>Facebook_Link</th>
+    <th>Social_Media_Other</th>
+    <th>Created_By</th>
+    <th>Changed_By</th>
+    <th>created_Date</th>
+    <th>created_Time</th>
+    <th>Changed_Date</th>
+    <th>Changed_Time</th>
+  </tr>
+  {% for i in u %}
+  <tr>
+    <td>{{i.Group1}}</td>
+    <td>{{i.Group2}}</td>
+    <td>{{i.Group3}}</td>
+    <td>{{i.Group4}}</td>
+    <td>{{i.Group5}}</td>
+    <td>{{i.Group6}}</td>
+    <td>{{i.Group7}}</td>
+    <td>{{i.Group8}}</td>
+    <td>{{i.Group9}}</td>
+    <td>{{i.Group10}}</td>
+    <td>{{i.Salutation}}</td>
+    <td>{{i.First_Name}}</td>
+    <td>{{i.Middle_Name}}</td>
+    <td>{{i.Last_Name}}</td>
+    <td>{{i.Primary_Number}}</td>
+    <td>{{i.Alternate_Number}}</td>
+    <td>{{i.Primary_Mail}}</td>
+    <td>{{i.Alternate_Mail}}</td>
+    <td>{{i.Location}}</td>
+    <td>{{i.City}}</td>
+    <td>{{i.State}}</td>
+    <td>{{i.Country}}</td>
+    <td>{{i.Pincode}}</td>
+    <td>{{i.Designation}}</td>
+    <td>{{i.Primary_Expertise}}</td>
+    <td>{{i.Primary_Expertise1}}</td>
+    <td>{{i.Primary_Expertise2}}</td>
+    <td>{{i.Highest_Education}}</td>
+    <td>{{i.Gender}}</td>
+    <td>{{i.DOB}}</td>
+    <td>{{i.Message_Open}}</td>
+    <td>{{i.Responded}}</td>
+    <td>{{i.Linked_Clicked}}</td>
+    <td>{{i.Source}}</td>
+    <td>{{i.Org_Name}}</td>
+    <td>{{i.Nature_Of_Business}}</td>
+    <td>{{i.Org_Name_Location}}</td>
+    <td>{{i.Do_Not_Call}}</td>
+    <td>{{i.Do_Not_Message}}</td>
+    <td>{{i.Do_Not_Mail}}</td>
+    <td>{{i.Do_Not_Whatsapp}}</td>
+    <td>{{i.Do_Not_Disturb}}</td>
+    <td>{{i.Notes1}}</td>
+    <td>{{i.Notes2}}</td>
+    <td>{{i.Notes3}}</td>
+    <td>{{i.Notes4}}</td>
+    <td>{{i.Notes5}}</td>
+    <td>{{i.Remarks}}</td>
+    <td><img style="width:100px;" src="{{ i.Document_Attach.url }}" alt="{{ product.name }} image"></td>
+
+    <td>{{i.Called}}</td>
+    <td>{{i.Met}}</td>
+    <td>{{i.Full_Name}}</td>
+    <td>{{i.Out_Of_Station}}</td>
+    <td>{{i.Out_Of_Country}}</td>
+    <td>{{i.Generated_Pincode}}</td>
+    <td>{{i.Mark_For_Deletion}}</td>
+    <td>{{i.Reason_For_Deletion}}</td>
+    <td>{{i.Blog_Link}}</td>
+    <td>{{i.Website}}</td>
+    <td>{{i.Linkedin_Link}}</td>
+    <td>{{i.Instagram_Link}}</td>
+    <td>{{i.Youtube_Link}}</td>
+    <td>{{i.Facebook_Link}}</td>
+    <td>{{i.Social_Media_Other}}</td>
+    <td>{{i.Created_By}}</td>
+    <td>{{i.Changed_By}}</td>
+    <td>{{i.created_Date}}</td>
+    <td>{{i.created_Time}}</td>
+    <td>{{i.Changed_Date}}</td>
+    <td>{{i.Changed_Time}}</td>
+
+
+  </tr>
+  {% endfor %}
+</table>
+
+</body>
+</html>
