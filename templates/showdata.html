@@ -3,17 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
 table, th, td {
   border:1px solid black;
 }
 </style>
+<link
+rel="stylesheet"
+type="text/css"
+href="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/css/jquery.dataTables.css"
+/>
+
 </head>
 <body>
 
+<a href="/Csvdata" style="padding-top: 8px;
+  padding-right: 8px;
+  padding-bottom: 8px;
+  padding-left: 8px;background-color:blue;color:white;ma;
 
-<table style="width:100%">
+
+  margin-left: 5px;">Download Data</a>
+<table style="width:100%;margin-top: 10px;" >
   <tr>
+    <th>Action</th>
     <th>Group1</th>
     <th>Group2</th>
     <th>Group3</th>
@@ -79,6 +97,7 @@ table, th, td {
     <th>Facebook_Link</th>
     <th>Social_Media_Other</th>
     <th>Created_By</th>
+    <th>Entered_By</th>
     <th>Changed_By</th>
     <th>created_Date</th>
     <th>created_Time</th>
@@ -87,7 +106,9 @@ table, th, td {
   </tr>
   {% for i in u %}
   <tr>
-    <td>{{i.Group1}}</td>
+ <td>
+                    <a href="editdata/{{ i.id }}" class="btn btn-success btn-sm">Edit</a>
+                </td>    <td>{{i.Group1}}</td>
     <td>{{i.Group2}}</td>
     <td>{{i.Group3}}</td>
     <td>{{i.Group4}}</td>
@@ -135,7 +156,9 @@ table, th, td {
     <td>{{i.Notes4}}</td>
     <td>{{i.Notes5}}</td>
     <td>{{i.Remarks}}</td>
-    <td><img style="width:100px;" src="{{ i.Document_Attach.url }}" alt="{{ product.name }} image"></td>
+        {% if i.Document_Attach %}
+    <td><img style="width:100px;" src="{{ i.Document_Attach.url }}"></td>
+{% endif %}
 
     <td>{{i.Called}}</td>
     <td>{{i.Met}}</td>
@@ -153,16 +176,43 @@ table, th, td {
     <td>{{i.Facebook_Link}}</td>
     <td>{{i.Social_Media_Other}}</td>
     <td>{{i.Created_By}}</td>
+    <td>{{i.Entered_By}}</td>
     <td>{{i.Changed_By}}</td>
     <td>{{i.created_Date}}</td>
     <td>{{i.created_Time}}</td>
     <td>{{i.Changed_Date}}</td>
     <td>{{i.Changed_Time}}</td>
 
-
   </tr>
   {% endfor %}
 </table>
+{% if u.has_other_pages %}
+  <nav aria-label="Page navigation">
+    <ul class="pagination">
+      {% if u.has_previous %}
+        <li class="page-item"><a class="page-link" href="?page={{ u.previous_page_number }}">&laquo;</a></li>
+      {% else %}
+        <li class="page-item disabled"><a class="page-link" href="#">&laquo;</a></li>
+      {% endif %}
+
+      {% for i in u.paginator.page_range %}
+        {% if u.number == i %}
+          <li class="page-item active"><a class="page-link" href="#">{{ i }} <span class="sr-only">(current)</span></a></li>
+        {% else %}
+          <li class="page-item"><a class="page-link" href="?page={{ i }}">{{ i }}</a></li>
+        {% endif %}
+      {% endfor %}
+
+      {% if u.has_next %}
+        <li class="page-item"><a class="page-link" href="?page={{ u.next_page_number }}">&raquo;</a></li>
+      {% else %}
+        <li class="page-item disabled"><a class="page-link" href="#">&raquo;</a></li>
+      {% endif %}
+    </ul>
+  </nav>
+{% endif %}
+
+
 
 </body>
 </html>

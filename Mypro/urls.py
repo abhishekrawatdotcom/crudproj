@@ -23,4 +23,9 @@ urlpatterns = [
     path('showuser', ShowPage, name="showuser"),
     path('add', add_book, name="showuser"),
     path('Showdata', Showdata, name="showuser"),
+    path('editdata/<int:id>', editdata, name="ejob"),
+    path('Update_Book/<int:id>', Update_Book, name="ejob"),
+    path('Csvdata', export_data_to_excel, name="ejob"),
+    # path('update_user/<int:id>', update_user, name="ejob"),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+

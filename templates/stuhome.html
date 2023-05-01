@@ -5,9 +5,7 @@
 
 {%   include 'student_navigation.html'%}
 
-     <marquee style="font-family: Trebuchet MS sans-serif; font-size: 25px; color: white; background-color: orangered; margin-top: 0.5%">
-        Please Register Your Detials
-    </marquee>
+
 
 <hr>
 <div class="container">
@@ -27,71 +25,59 @@
 {% endif %}
 
 
-<form class=" mt-5" action="/add"  method="POST" enctype="multipart/form-data">
+<form  action="/add"  method="POST" enctype="multipart/form-data">
     {% csrf_token %}
+
     <div class="form-row">
-        <!--<div class="form-group col-md-4">-->
-        <!--    <label>Username</label>-->
-        <!--    <input type="text" class="form-control" name="name11" value="{{u.Name}}" >-->
-        <!--</div>-->
-
-
-
-
-<div class="form-group col-md-6">
-
-                <div class="form-group col-md-12">
-                    <label>Group1:-</label>
-                    <input type="text" class="form-control" name="group1" value="" >
+       <div class="form-group col-md-3">
+                    <input placeholder="Group1" type="text" class="form-control" name="group1" value="" >
                 </div>
 
-                <div class="form-group col-md-12">
-                    <label>Group2:-</label>
-                    <input type="text" class="form-control" name="group2" value="" >
+                <div class="form-group col-md-3">
+                    <input placeholder="Group2" type="text" class="form-control" name="group2" value="" >
                 </div>
 
-                <div class="form-group col-md-12">
-                    <label>Group3:-</label>
-                    <input type="text" class="form-control" name="group3" value="" >
+                <div class="form-group col-md-3">
+
+                    <input placeholder="Group3" type="text" class="form-control" name="group3" value="" >
                 </div>
-                <div class="form-group col-md-12">
-                    <label>Group4:-</label>
-                    <input type="text" class="form-control" id="f5" name="group4" value="">
+                <div class="form-group col-md-3">
+
+                    <input placeholder="Group4" type="text" class="form-control" id="f5" name="group4" value="">
                 </div>
 
-                <div class="form-group col-md-12">
-                    <label>Group5:-</label>
-                    <input type="text" class="form-control" id="f6" name="group5" value="">
+                <div class="form-group col-md-3">
+
+                    <input placeholder="Group5" type="text" class="form-control" id="f6" name="group5" value="">
                 </div>
 
-                <div class="form-group col-md-12">
-                    <label>Group6:-</label>
-                    <input type="text" class="form-control" id="f7" name="group6" value="">
+                <div class="form-group col-md-3">
+                    <input placeholder="Group6" type="text" class="form-control" id="f7" name="group6" value="">
                 </div>
 
-                <div class="form-group col-md-12">
-                    <label>Group7:-</label>
-                    <input type="text" class="form-control" name="group7" value="">
+                <div class="form-group col-md-3">
+                    <input placeholder="Group7" type="text" class="form-control" name="group7" value="">
                 </div>
 
 
-                <div class="form-group col-md-12">
-                    <label>Group8:-</label>
-                    <input type="text" class="form-control" id="f8" name="group8" value="" >
+                <div class="form-group col-md-3">
+                    <input  placeholder="Group8" type="text" class="form-control" id="f8" name="group8" value="" >
                 </div>
-</div>
-<div class="form-group col-md-6">
+        <div class="form-group col-md-3">
 
-                <div class="form-group col-md-12">
-                    <label>Group9:-</label>
-                    <input type="text" class="form-control" name="group9" value="" >
+                    <input placeholder="Group9" type="text" class="form-control" name="group9" value="" >
                 </div>
 
-                <div class="form-group col-md-12">
-                    <label>Group10:-</label>
-                    <input type="text" class="form-control" name="group10" value="">
+                <div class="form-group col-md-3">
+                    <input placeholder="Group10" type="text" class="form-control" name="group10" value="">
                 </div>
-           <div class="form-group col-md-4">
+
+
+
+            </div>
+
+        <div class="form-row">
+               <div class="form-group col-md-4">
                 <label>Salutation:-</label>
 
                 <div style="border:1px solid lightgray; padding:3px; border-radius:3px;">
@@ -113,186 +99,214 @@
                     </div>
                 </div>
 
-
                </div>
 
-                <div class="form-group col-md-12">
-                    <label>First Name:-</label>
-                    <input type="text" class="form-control" id="fn11" name="firstname" value="" required>
+            <div>
+                        <div class="form-row">
+                                            <div class="form-group col-md-3">
+                    <input placeholder="First Name" type="text" class="form-control" id="fn11" name="firstname" value="" required>
                 </div>
-                <div class="form-group col-md-12">
-                    <label>Middle Name:-</label>
-                    <input type="text" class="form-control" id="mn11" name="middlename" value="" required>
-                </div>
-
-                <div class="form-group col-md-12">
-                    <label>Last Name:-</label>
-                    <input type="text" class="form-control" id="ln11" name="lastname" value="" required>
+                <div class="form-group col-md-3">
+                    <input placeholder="Middle Name" type="text" class="form-control" id="mn11" name="middlename" value="" >
                 </div>
 
-                <div class="form-group col-md-12">
-                    <label>Primary Number:-</label>
-                    <input type="number" class="form-control"  name="primarynumber" value="" required>
+                <div class="form-group col-md-3">
+                    <input placeholder="Last Name" type="text" class="form-control" id="ln11" name="lastname" value="" >
                 </div>
 
-                <div class="form-group col-md-12">
-                    <label>Alternate Number:-</label>
-                    <input type="number" class="form-control"  name="alternatenumber" value="">
-                </div>
-    <div class="form-group col-md-12">
-                    <label>Primary Mail:-</label>
-                    <input type="email" class="form-control"  name="PrimaryMail" value="" required>
+                <div class="form-group col-md-3">
+                    <input placeholder="Primary Number" type="number" class="form-control" maxlength="10"  name="primarynumber" value="" >
                 </div>
 
-                <div class="form-group col-md-12">
-                    <label>Alternate Mail:-</label>
-                    <input type="email" class="form-control"  name="AlternateMail" value="">
+                <div class="form-group col-md-3">
+                    <input placeholder="Alternate Number" type="number" class="form-control" maxlength="10"  name="alternatenumber" value="">
+                </div>
+    <div class="form-group col-md-3">
+                    <input placeholder="Primary Mail" type="email" class="form-control"  name="PrimaryMail" value="" >
                 </div>
 
-                <div class="form-group col-md-12">
-                    <label>Location:-</label>
-                    <input type="text" id="f12" class="form-control" name="location" value="" required>
+                <div class="form-group col-md-3">
+                    <input placeholder="Alternate Mail" type="email" class="form-control"  name="AlternateMail" value="">
                 </div>
-</div>
+
+                <div class="form-group col-md-3">
+                    <input placeholder="Location" type="text" id="f12" class="form-control" name="location" value="" >
+                </div>
                  <div class="form-group col-md-3">
-            <label>City:-</label>
-            <input type="text" class="form-control" name="city" value="" required>
+            <input placeholder="City" type="text" class="form-control" name="city" value="" >
         </div>
         <div class="form-group col-md-3">
-            <label>State:-</label>
-            <input type="text" class="form-control" name="state" value="" required>
+            <input placeholder="State" type="text" class="form-control" name="state" value="" >
         </div>
         <div class="form-group col-md-3">
-            <label>Country:-</label>
-            <input type="text" class="form-control" name="country" value=""required >
+            <input placeholder="Country" type="text" class="form-control" name="country" value="" >
         </div>
         <div class="form-group col-md-3">
-            <label>Pincode:-</label>
-            <input type="text" class="form-control" name="pincode" value="" required>
+            <input placeholder="Pincode" type="text" class="form-control" name="pincode" value="" >
         </div>
         <div class="form-group col-md-3">
-            <label>Designation:-</label>
-            <input type="text" class="form-control" name="Designation" value="" required>
+            <input placeholder="Designation" type="text" class="form-control" name="Designation" value="" >
         </div>
-                <div class="form-group col-md-4">
-                    <label>Primary Expertise:-</label>
-                    <input type="text" class="form-control" name="PrimaryExpertise" value="">
+                <div class="form-group col-md-3">
+                    <input placeholder="Primary Expertise" type="text" class="form-control" name="PrimaryExpertise" value="">
                 </div>
-
-                <div class="form-group col-md-4">
-                    <label>Alternate Expertise1:-</label>
-                    <input type="text" class="form-control" name="AlternateExpertise1" value="">
-                </div>
-
-                <div class="form-group col-md-4">
-                    <label>Alternate Expertise2:-</label>
-                    <input type="text" class="form-control" name="AlternateExpertise2" value="">
-                </div>
-
-                <div class="form-group col-md-6">
-                    <label>Highest Education:-</label>
-                    <input type="text" class="form-control" name="HighestEducation" value="" required>
-                </div>
-
-                <div class="form-group col-md-6">
-                    <label>Gender:-</label>
-                    <input type="text" class="form-control" name="gender" value="" required>
-                </div>
-
 
                 <div class="form-group col-md-3">
-                    <label>DOB:-</label>
-                    <input type="date" class="form-control" id="f13" name="DOB" value="" required>
-                    <label>Message Open:-</label>
-                    <input type="checkbox" class="form-control" id="f14" name="MessageOpen" value="1">
-                    <label>Responded:-</label>
-                    <input type="checkbox" class="form-control" name="Responded" value="1">
-                    <label>Link Clicked:-</label>
-                    <input type="checkbox" class="form-control" name="LinkClicked" value="1">
-                    <label>Source:-</label>
-                    <input type="text" class="form-control" name="Source" value="">
-                    <label>Org Name:-</label>
-                    <input type="text" class="form-control" name="OrgName" value="">
+                    <input placeholder="Alternate Expertise1" type="text" class="form-control" name="AlternateExpertise1" value="">
+                </div>
+
+                <div class="form-group col-md-3">
+                    <input placeholder="Alternate Expertise2" type="text" class="form-control" name="AlternateExpertise2" value="">
+                </div>
+
+                <div class="form-group col-md-3">
+                    <input placeholder="Highest Education" type="text" class="form-control" name="HighestEducation" value="" >
+                </div>
+
+                <div class="form-group col-md-3">
+                    <input placeholder="Gender" type="text" class="form-control" name="gender" value="" >
+                </div>
+
+            <div>
+                                      <div class="form-row mt-2">
+                                            <div class="form-group col-md-3">
+                   DOB: <input type="date" class="form-control" id="f13" name="DOB" value="" >
                 </div>
                 <div class="form-group col-md-3">
-                    <label>Nature Of Business:-</label>
-                    <input type="text" class="form-control" id="f15" name="NatureOfBusiness" value="">
-                    <label>Org Location:-</label>
-                    <input type="text" class="form-control" id="f16" name="OrgLocation" value="">
-                    <label>Do Not Call:-</label>
-                    <input type="checkbox" class="form-control" name="DoNotCall" value="1">
-                    <label>Do Not Message:-</label>
-                    <input type="checkbox" class="form-control" name="DoNotMessage" value="1">
-                    <label>Do Not Mail:-</label>
-                    <input type="checkbox" class="form-control" name="DoNotMail" value="1">
-                    <label>Do Not Whatsapp:-</label>
-                    <input type="checkbox" class="form-control" name="DoNotWhatsapp" value="1">
+Message Open:<input style="width:30px;height:20"  type="checkbox" class="form-control" id="f14" name="MessageOpen" value="1">                </div>
+
+                <div class="form-group col-md-3">
+                  Responded:  <input style="width:30px;height:20" type="checkbox" class="form-control" name="Responded" value="1">
+                </div>
+
+                <div class="form-group col-md-3">
+                   Link Clicked: <input style="width:30px;height:20" type="checkbox" class="form-control" name="LinkClicked" value="1">
+                </div>
+
+                <div class="form-group col-md-3">
+                   Source: <input type="text" class="form-control" name="Source" value="">
+                </div>
+    <div class="form-group col-md-3">
+                    Org Name:<input type="text" class="form-control" name="OrgName" value="">
+                </div>
+
+                <div class="form-group col-md-3">
+<input placeholder="Nature Of Business:" type="text" class="form-control" id="f15" name="NatureOfBusiness" value="">                </div>
+
+                <div class="form-group col-md-3">
+<input placeholder="Org Location:" type="text" class="form-control" id="f16" name="OrgLocation" value="">                </div>
+                 <div class="form-group col-md-3">
+
+                   Do Not Call: <input style="width:30px;height:20" type="checkbox" class="form-control" name="DoNotCall" value="1">
+        </div>
+        <div class="form-group col-md-3">
+                   Do Not Message <input style="width:30px;height:20" type="checkbox" class="form-control" name="DoNotMessage" value="1">
+        </div>
+        <div class="form-group col-md-3">
+                    Do Not Mail:<input style="width:30px;height:20" type="checkbox" class="form-control" name="DoNotMail" value="1">
+        </div>
+        <div class="form-group col-md-3">
+                    Do Not Whatsapp:<input style="width:30px;height:20" type="checkbox" class="form-control" name="DoNotWhatsapp" value="1">
+        </div>
+        <div class="form-group col-md-3">
+           Do Not Disturb:<input style="width:30px;height:20" type="checkbox" class="form-control" id="f17" name="DoNotDisturb" value="1">
+        </div>
+                <div class="form-group col-md-3">
+                    <input placeholder="Notes1:" type="text" class="form-control" id="f18" name="Notes1" value="">
+                </div>
+
+                <div class="form-group col-md-3">
+                    <input placeholder="Notes2" type="text" class="form-control" name="Notes2" value="">
+                </div>
+
+                <div class="form-group col-md-3">
+                    <input placeholder="Notes3" type="text" class="form-control" name="Notes3" value="">
+                </div>
+
+                <div class="form-group col-md-3">
+                    <input placeholder="Notes4" type="text" class="form-control" name="Notes4" value="">
+                </div>
+
+                <div class="form-group col-md-3">
+                    <input placeholder="Notes5" type="text" class="form-control" name="Notes5" value="">
+                </div>
+
+            <div>
+
+                <div class="form-row mt-3">
+                                            <div class="form-group col-md-3">
+                    <input placeholder="Remark" type="text" class="form-control" id="f19" name="Remark" value="">
                 </div>
                 <div class="form-group col-md-3">
-                    <label>Do Not Disturb:-</label>
-                    <input type="checkbox" class="form-control" id="f17" name="DoNotDisturb" value="1">
-                    <label>Notes1:-</label>
-                    <input type="text" class="form-control" id="f18" name="Notes1" value="">
-                    <label>Notes2:-</label>
-                    <input type="text" class="form-control" name="Notes2" value="">
-                    <label>Notes3:-</label>
-                    <input type="text" class="form-control" name="Notes3" value="">
-                    <label>Notes4:-</label>
-                    <input type="text" class="form-control" name="Notes4" value="">
-                    <label>Notes5:-</label>
-                    <input type="text" class="form-control" name="Notes5" value="">
+                    <input placeholder="Document Attach" type="file" class="form-control" id="f20" name="DocumentAttach" value="">
                 </div>
+
                 <div class="form-group col-md-3">
-                    <label>Remark:-</label>
-                    <input type="text" class="form-control" id="f19" name="Remark" value="">
-                    <label>Document Attach:-</label>
-                    <input type="file" class="form-control" id="f20" name="DocumentAttach" value="">
-                    <label>Called:-</label>
-                    <input type="checkbox" class="form-control" name="Called" value="1">
-                    <label>Met:-</label>
-                    <input type="checkbox" class="form-control" name="Met" value="1">
-                    <label>Full Name:-</label>
-                    <input type="text" class="form-control"  id="fulln11" name="FullName" value="" readonly>
-                    <label>Out Of Station:-</label>
-                    <input type="checkbox" class="form-control" name="OutOfStation" value="1">
-
-                </div>
-                <div class="form-group col-md-6">
-                    <label>Out Of Country:-</label>
-                    <input type="text" class="form-control" id="f21" name="OutOfCountry" value="">
-                    <label>Generated Pin Code:-</label>
-                    <input type="text" class="form-control" id="f22" name="GeneratedPinCode" value="">
-                    <label>Mark For Deletion:-</label>
-                    <input type="checkbox" class="form-control" name="MarkForDeletion" value="1">
-                    <label>Reason For Deletion:-</label>
-                    <input type="text" class="form-control" name="ReasonForDeletion" value="">
-                    <label>Big Link:-</label>
-                    <input type="text" class="form-control" name="BigLink" value="">
-                    <label>Website:-</label>
-                    <input type="text" class="form-control" name="Website" value="">
-                    <label>Linkedin Link:-</label>
-                    <input type="text" class="form-control" name="LinkedinLink" value="">
+                   Called: <input style="width:30px;height:20" type="checkbox" class="form-control" name="Called" value="1">
                 </div>
 
-                <div class="form-group col-md-4">
-                    <label>Instagram Link:-</label>
-                    <input type="text" class="form-control" name="nstagramLink" value="">
-                </div>
-                <div class="form-group col-md-4">
-                    <label>Youtube Link:-</label>
-                    <input type="text" class="form-control" name="YoutubeLink" value="">
-                </div>
-                <div class="form-group col-md-4">
-                    <label>Facebook Link:-</label>
-                    <input type="text" id="f23" class="form-control" name="FacebookLink" value="">
+                <div class="form-group col-md-3">
+                    Met:<input style="width:30px;height:20" type="checkbox" class="form-control" name="Met" value="1">
                 </div>
 
-                <div class="form-group col-md-4">
-                    <label>Social Media Other:-</label>
-                    <input type="text" id="f24" class="form-control" name="SocialMediaOther" value="">
+                <div class="form-group col-md-3">
+                    <input placeholder="Full Name" type="text" class="form-control"  id="fulln11" name="FullName" value="" readonly>
+                </div>
+    <div class="form-group col-md-3">
+                   Out Of Station: <input style="width:30px;height:20" type="checkbox" class="form-control" name="OutOfStation" value="1">
                 </div>
 
-            </div>
+                <div class="form-group col-md-3">
+                    <input placeholder="Out Of Country" type="text" class="form-control" id="f21" name="OutOfCountry" value="">
+                </div>
+
+                <div class="form-group col-md-3">
+                    <input placeholder="Generated Pin Code" type="text" class="form-control" id="f22" name="GeneratedPinCode" value="">
+                </div>
+                 <div class="form-group col-md-3">
+                    Mark For Deletion:<input style="width:30px;height:20" type="checkbox" class="form-control" name="MarkForDeletion" value="1">
+        </div>
+        <div class="form-group col-md-3">
+                    <input placeholder="Reason For Deletion:" type="text" class="form-control" name="ReasonForDeletion" value="">
+        </div>
+        <div class="form-group col-md-3">
+                    <input placeholder="Big Link:" type="text" class="form-control" name="BigLink" value="">
+        </div>
+        <div class="form-group col-md-3">
+                    <input placeholder="Website" type="text" class="form-control" name="Website" value="">
+        </div>
+        <div class="form-group col-md-3">
+                    <input placeholder="Linkedin Link:" type="text" class="form-control" name="LinkedinLink" value="">        </div>
+                <div class="form-group col-md-3">
+                    <input placeholder="Instagram Link:" type="text" class="form-control" name="nstagramLink" value="">
+                </div>
+
+                <div class="form-group col-md-3">
+                    <input placeholder="Youtube Link:" type="text" class="form-control" name="YoutubeLink" value="">
+                </div>
+
+                <div class="form-group col-md-3">
+                    <input placeholder="Facebook Link:" type="text" id="f23" class="form-control" name="FacebookLink" value="">
+                </div>
+
+                <div class="form-group col-md-3">
+                    <input placeholder="Social Media Other:" type="text" id="f24" class="form-control" name="SocialMediaOther" value="">
+                </div>
+                    <div class="form-group col-md-3">
+                    <input placeholder="Enter By:" type="text" id="f24" class="form-control" name="EnterBy" value="">
+                </div>
+                    <div class="form-group col-md-3">
+                    <input placeholder="Changedate:" type="text" id="f24" class="form-control" name="Changedate" value="">
+                </div>
+                    <div class="form-group col-md-3">
+                    <input placeholder="Changetime:" type="text" id="f24" class="form-control" name="Changetime" value="">
+                </div>
+
+
+            <div>
+
+
+<br><br><br>
             <input type="submit" value="Add Data" class="btn btn-primary my-3" style="width: 200px;">
 
 
@@ -312,3 +326,5 @@ function update() {
 }
 </script>
 {%   endblock %}
+
+

@@ -1,0 +1,332 @@
+
+{%  load static %}
+
+{%   block body %}
+
+{%   include 'student_navigation.html'%}
+
+
+
+<hr>
+<div class="container">
+    <div class="Jumbotron">
+    <div class="row">
+        <div class="col-sm-12">
+
+                                                                                               {% if messages %}
+  {% for message in messages %}
+    <div class="alert alert-dismissible alert-success">
+      <button type="button" class="close" data-dismiss="alert">
+      ×
+      </button>
+      <strong>{{message}}<strong>
+    </div>
+ {% endfor %}
+{% endif %}
+
+
+<form  action="/Update_Book/{{udata.id}}"  method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+
+    <div class="form-row">
+       <div class="form-group col-md-3">
+                    <input placeholder="Group1" type="text" class="form-control" name="group11" value="{{ udata.Group1 }}" >
+                </div>
+
+                <div class="form-group col-md-3">
+                    <input placeholder="Group2" type="text" class="form-control" name="group21" value="{{ udata.Group2 }}" >
+                </div>
+
+                <div class="form-group col-md-3">
+
+                    <input placeholder="Group3" type="text" class="form-control" name="group31" value="{{ udata.Group3 }}" >
+                </div>
+                <div class="form-group col-md-3">
+
+                    <input placeholder="Group4" type="text" class="form-control" id="f5" name="group41" value="{{ udata.Group4 }}">
+                </div>
+
+                <div class="form-group col-md-3">
+
+                    <input placeholder="Group5" type="text" class="form-control" id="f6" name="group51" value="{{ udata.Group5 }}">
+                </div>
+
+                <div class="form-group col-md-3">
+                    <input placeholder="Group6" type="text" class="form-control" id="f7" name="group61" value="{{ udata.Group6 }}">
+                </div>
+
+                <div class="form-group col-md-3">
+                    <input placeholder="Group7" type="text" class="form-control" name="group71" value="{{ udata.Group7 }}">
+                </div>
+
+
+                <div class="form-group col-md-3">
+                    <input  placeholder="Group8" type="text" class="form-control" id="f8" name="group81" value="{{ udata.Group8 }}" >
+                </div>
+        <div class="form-group col-md-3">
+
+                    <input placeholder="Group9" type="text" class="form-control" name="group91" value="{{ udata.Group9 }}" >
+                </div>
+
+                <div class="form-group col-md-3">
+                    <input placeholder="Group10" type="text" class="form-control" name="group101" value="{{ udata.Group10 }}">
+                </div>
+
+
+
+
+            </div>
+
+        <div class="form-row">
+               <div class="form-group col-md-4">
+                <label>Salutation:-</label>
+
+                <div style="border:1px solid lightgray; padding:3px; border-radius:3px;">
+                    <div class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" id="customRadioInline" name="Salutation1" class="custom-control-input" value=Ms.">
+                        <label class="custom-control-label" for="customRadioInline">Ms.</label>
+                    </div>
+                    <div class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" id="customRadioInline2" name="Salutation1" class="custom-control-input" value="Mrs."  >
+                        <label class="custom-control-label" for="customRadioInline2">Mrs.</label>
+                    </div>
+                    <div class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" id="customRadioInline3" name="Salutation1" class="custom-control-input" value="Mr.">
+                        <label class="custom-control-label" for="customRadioInline3">Mr.</label>
+                    </div>
+                    <div class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" id="customRadioInline4" name="Salutation1" class="custom-control-input" value="Dr.">
+                        <label class="custom-control-label" for="customRadioInline4">Dr.</label>
+                    </div>
+                </div>
+
+               </div>
+
+            <div>
+                        <div class="form-row">
+                                            <div class="form-group col-md-3">
+                    <input placeholder="First Name" type="text" class="form-control" id="fn11" name="firstname1" value="{{udata.First_Name}}" required>
+                </div>
+                <div class="form-group col-md-3">
+                    <input placeholder="Middle Name" type="text" class="form-control" id="mn11" name="middlename1" value="{{udata.Middle_Name}}" >
+                </div>
+
+                <div class="form-group col-md-3">
+                    <input placeholder="Last Name" type="text" class="form-control" id="ln11" name="lastname1" value="{{udata.Last_Name}}" >
+                </div>
+
+                <div class="form-group col-md-3">
+                    <input placeholder="Primary Number" type="number" class="form-control" maxlength="10"  name="primarynumber1" value="{{udata.Primary_Number}}" >
+                </div>
+
+                <div class="form-group col-md-3">
+                    <input placeholder="Alternate Number" type="number" class="form-control" maxlength="10"  name="alternatenumber1" value="{{udata.Alternate_Number}}">
+                </div>
+    <div class="form-group col-md-3">
+                    <input placeholder="Primary Mail" type="email" class="form-control"  name="PrimaryMail1" value="{{udata.Primary_Mail}}" >
+                </div>
+
+                <div class="form-group col-md-3">
+                    <input placeholder="Alternate Mail" type="email" class="form-control"  name="AlternateMail1" value="{{udata.Alternate_Mail}}">
+                </div>
+
+                <div class="form-group col-md-3">
+                    <input placeholder="Location" type="text" id="f12" class="form-control" name="location1" value="{{udata.Location}}" >
+                </div>
+                 <div class="form-group col-md-3">
+            <input placeholder="City" type="text" class="form-control" name="city1" value="{{udata.City}}" >
+        </div>
+        <div class="form-group col-md-3">
+            <input placeholder="State" type="text" class="form-control" name="state1" value="{{udata.State}}" >
+        </div>
+        <div class="form-group col-md-3">
+            <input placeholder="Country" type="text" class="form-control" name="country1" value="{{udata.Country}}" >
+        </div>
+        <div class="form-group col-md-3">
+            <input placeholder="Pincode" type="text" class="form-control" name="pincode1" value="{{udata.Pincode}}" >
+        </div>
+        <div class="form-group col-md-3">
+            <input placeholder="Designation" type="text" class="form-control" name="Designation1" value="{{udata.Designation}}" >
+        </div>
+                <div class="form-group col-md-3">
+                    <input placeholder="Primary Expertise" type="text" class="form-control" name="PrimaryExpertise1" value="{{udata.Primary_Expertise}}">
+                </div>
+
+                <div class="form-group col-md-3">
+                    <input placeholder="Alternate Expertise1" type="text" class="form-control" name="AlternateExpertise11" value="{{udata.Primary_Expertise1}}">
+                </div>
+
+                <div class="form-group col-md-3">
+                    <input placeholder="Alternate Expertise2" type="text" class="form-control" name="AlternateExpertise21" value="{{udata.Primary_Expertise2}}">
+                </div>
+
+                <div class="form-group col-md-3">
+                    <input placeholder="Highest Education" type="text" class="form-control" name="HighestEducation1" value="{{udata.Highest_Education}}" >
+                </div>
+
+                <div class="form-group col-md-3">
+                    <input placeholder="Gender" type="text" class="form-control" name="gender1" value="{{udata.Gender}}" >
+                </div>
+
+            <div>
+                                      <div class="form-row mt-2">
+                                            <div class="form-group col-md-3">
+                   DOB: <input type="date" class="form-control" id="f13" name="DOB1" value="{{udata.Primary_Expertise}}" >
+                </div>
+                <div class="form-group col-md-3">
+Message Open:<input style="width:30px;height:20"  type="checkbox" class="form-control" id="f14" name="MessageOpen1" value="1">                </div>
+
+                <div class="form-group col-md-3">
+                  Responded:  <input style="width:30px;height:20" type="checkbox" class="form-control" name="Responded1" value="1">
+                </div>
+
+                <div class="form-group col-md-3">
+                   Link Clicked: <input style="width:30px;height:20" type="checkbox" class="form-control" name="LinkClicked1" value="1">
+                </div>
+
+                <div class="form-group col-md-3">
+                   Source: <input type="text" class="form-control" name="Source1" value="{{udata.Source}}">
+                </div>
+    <div class="form-group col-md-3">
+                    Org Name:<input type="text" class="form-control" name="OrgName1" value="{{udata.Org_Name}}">
+                </div>
+
+                <div class="form-group col-md-3">
+<input placeholder="Nature Of Business:" type="text" class="form-control" id="f15" name="NatureOfBusiness1" value="{{udata.Nature_Of_Business}}">                </div>
+
+                <div class="form-group col-md-3">
+<input placeholder="Org Location:" type="text" class="form-control" id="f16" name="OrgLocation1" value="{{udata.Org_Name_Location}}">                </div>
+                 <div class="form-group col-md-3">
+
+                   Do Not Call: <input style="width:30px;height:20" type="checkbox" class="form-control" name="DoNotCall1" value="1">
+        </div>
+        <div class="form-group col-md-3">
+                   Do Not Message <input style="width:30px;height:20" type="checkbox" class="form-control" name="DoNotMessage1" value="1">
+        </div>
+        <div class="form-group col-md-3">
+                    Do Not Mail:<input style="width:30px;height:20" type="checkbox" class="form-control" name="DoNotMail1" value="1">
+        </div>
+        <div class="form-group col-md-3">
+                    Do Not Whatsapp:<input style="width:30px;height:20" type="checkbox" class="form-control" name="DoNotWhatsapp1" value="1">
+        </div>
+        <div class="form-group col-md-3">
+           Do Not Disturb:<input style="width:30px;height:20" type="checkbox" class="form-control" id="f17" name="DoNotDisturb1" value="1">
+        </div>
+                <div class="form-group col-md-3">
+                    <input placeholder="Notes1:" type="text" class="form-control" id="f18" name="Notes11" value="{{udata.Notes1}}">
+                </div>
+
+                <div class="form-group col-md-3">{{udata.Org_Name}}
+                    <input placeholder="Notes2" type="text" class="form-control" name="Notes21" value="{{udata.Notes2}}">
+                </div>
+
+                <div class="form-group col-md-3">
+                    <input placeholder="Notes3" type="text" class="form-control" name="Notes31" value="{{udata.Notes3}}">
+                </div>
+
+                <div class="form-group col-md-3">
+                    <input placeholder="Notes4" type="text" class="form-control" name="Notes41" value="{{udata.Notes4}}">
+                </div>
+
+                <div class="form-group col-md-3">
+                    <input placeholder="Notes5" type="text" class="form-control" name="Notes51" value="{{udata.Notes5}}">
+                </div>
+
+            <div>
+
+                <div class="form-row mt-3">
+                                            <div class="form-group col-md-3">
+                    <input placeholder="Remark" type="text" class="form-control" id="f19" name="Remark1" value="{{udata.Remarks}}">
+                </div>
+                <div class="form-group col-md-3">
+                    <input placeholder="Document Attach" type="file" class="form-control" id="f20" name="DocumentAttach1" value="">
+                </div>
+
+                <div class="form-group col-md-3">
+                   Called: <input style="width:30px;height:20" type="checkbox" class="form-control" name="Called1" value="1">
+                </div>
+
+                <div class="form-group col-md-3">
+                    Met:<input style="width:30px;height:20" type="checkbox" class="form-control" name="Met1" value="1">
+                </div>
+
+                <div class="form-group col-md-3">
+                    <input placeholder="Full Name" type="text" class="form-control"  id="fulln11" name="FullName1" value="{{udata.Full_Name}}" readonly>
+                </div>
+    <div class="form-group col-md-3">
+                   Out Of Station: <input style="width:30px;height:20" type="checkbox" class="form-control" name="OutOfStation1" value="1">
+                </div>
+
+                <div class="form-group col-md-3">
+                    <input placeholder="Out Of Country" type="text" class="form-control" id="f21" name="OutOfCountry1" value="{{udata.Out_Of_Country}}">
+                </div>
+
+                <div class="form-group col-md-3">
+                    <input placeholder="Generated Pin Code" type="text" class="form-control" id="f22" name="GeneratedPinCode1" value="{{udata.Generated_Pincode}}">
+                </div>
+                 <div class="form-group col-md-3">
+                    Mark For Deletion:<input style="width:30px;height:20" type="checkbox" class="form-control" name="MarkForDeletion1" value="1">
+        </div>
+        <div class="form-group col-md-3">
+                    <input placeholder="Reason For Deletion:" type="text" class="form-control" name="ReasonForDeletion1" value="{{udata.Reason_For_Deletion}}">
+        </div>
+        <div class="form-group col-md-3">
+                    <input placeholder="Big Link:" type="text" class="form-control" name="BigLink1" value="{{udata.Blog_Link}}">
+        </div>
+        <div class="form-group col-md-3">
+                    <input placeholder="Website" type="text" class="form-control" name="Website1" value="{{udata.Website}}">
+        </div>
+        <div class="form-group col-md-3">
+                    <input placeholder="Linkedin Link:" type="text" class="form-control" name="LinkedinLink1" value="{{udata.Linkedin_Link}}">        </div>
+                <div class="form-group col-md-3">
+                    <input placeholder="Instagram Link:" type="text" class="form-control" name="nstagramLink1" value="{{udata.Instagram_Link}}">
+                </div>
+
+                <div class="form-group col-md-3">
+                    <input placeholder="Youtube Link:" type="text" class="form-control" name="YoutubeLink1" value="{{udata.Youtube_Link}}">
+                </div>
+
+                <div class="form-group col-md-3">
+                    <input placeholder="Facebook Link:" type="text" id="f23" class="form-control" name="FacebookLink1" value="{{udata.Facebook_Link}}">
+                </div>
+
+                <div class="form-group col-md-3">
+                    <input placeholder="Social Media Other:" type="text" id="f24" class="form-control" name="SocialMediaOther1" value="{{udata.Social_Media_Other}}">
+                </div>
+                       <div class="form-group col-md-3">
+                    <input placeholder="Enter By:" type="text" id="f24" class="form-control" name="EnterBy1" value="{{udata.Entered_By}}">
+                </div>
+                    <div class="form-group col-md-3">
+                    <input placeholder="Changedate:" type="text" id="f24" class="form-control" name="Changedate1" value="{{udata.Changed_Date}}">
+                </div>
+                    <div class="form-group col-md-3">
+                    <input placeholder="Changetime:" type="text" id="f24" class="form-control" name="Changetime1" value="{{udata.Changed_Time}}">
+                </div>
+
+
+
+            <div>
+
+
+<br><br><br>
+            <input type="submit" value="Add Data" class="btn btn-primary my-3" style="width: 200px;">
+
+
+    </div>
+    {% comment %} <div class="cl-sm-4 mt-5" text-center>
+        <img src="{{email.profilepic.url}}" style="width:300px; height:300px;">
+    </div> {% endcomment %}
+    </div><!--row 1 end-->
+</div>
+</div>
+<script>
+$("#fn11,#mn11,#ln11").keyup(function(){
+    update();
+});
+function update() {
+  $("#fulln11").val($('#fn11').val() + " " + $('#mn11').val() + " " + $('#ln11').val());
+}
+</script>
+{%   endblock %}
+
+
